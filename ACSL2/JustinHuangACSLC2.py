@@ -14,7 +14,6 @@ def removeCommon(wordlist):
     wordlist.append(word2)
     return(wordlist)
 
-
 def checkNear(wordlist):
     word1=wordlist[0]
     word2=wordlist[1]
