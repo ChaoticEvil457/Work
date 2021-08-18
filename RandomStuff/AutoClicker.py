@@ -4,10 +4,10 @@ from pynput.mouse import Button, Controller
 from pynput.keyboard import Listener, KeyCode
 
 
-delay = 0.001
+delay = 0.05
 button = Button.left
-start_stop_key = KeyCode(char='s')
-exit_key = KeyCode(char='`')
+start_stop_key = KeyCode(char=']')
+exit_key = KeyCode(char='[')
 
 
 class ClickMouse(threading.Thread):
