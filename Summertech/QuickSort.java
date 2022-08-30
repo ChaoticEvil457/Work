@@ -9,18 +9,18 @@ public class QuickSort {
 
 		ArrayList<Integer> ray=new ArrayList<Integer>();
 
-		ray.add(23);
-		ray.add(1);
-		ray.add(55);
-		ray.add(5);
-		ray.add(3165);
-		ray.add(45);
-		ray.add(6246);
-		ray.add(3165);
-		ray.add(453);
-		ray.add(525);
-		ray.add(315);
-		ray.add(45644);
+		ray.add(10);
+		ray.add(20);
+		ray.add(15);
+		ray.add(12);
+		ray.add(13);
+		ray.add(11);
+		ray.add(11);
+		ray.add(12);
+		ray.add(15);
+		ray.add(10);
+		ray.add(15);
+		ray.add(15);
 		long time=System.currentTimeMillis();
 		ray = sorter(ray);
 		System.out.println((System.currentTimeMillis()-time));

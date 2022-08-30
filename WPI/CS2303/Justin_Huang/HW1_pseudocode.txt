@@ -1,0 +1,51 @@
+include standard input/output
+
+int main(void){
+    define variable for user year input
+    define variable for days in the month
+    define variable for skipping days       //skip 0 for Sunday, skip 6 for Saturday, 
+                                            //starts at 3 b/c it's the start date for 2020
+    while(user input is invalid){ //2020 to 2030
+    get a year from the user
+    print an error message if the input is invalid
+    }
+
+    run (user input year - 2020) times{
+        if it's a leap year{
+            add 2 to skipped days
+        }
+        else{
+            add 1 to skipped days
+        }
+        if skipped days>6 { // prevents overflow
+            subtract 7 from skipped days //6 is Saturday, so at 7, this would set you to 0, aka Sunday
+        }
+    }
+
+
+    run 12 times{
+        switch(month){ // depending on what month it is, prints out a month and sets days in a month
+            case 0: January, print January, set days in month variable to 31 
+            case 1: Febuary, print Febuary, set days in month variable to 28
+            if date is 2020, 2024, or 2028, set variable to 29      //leap year
+            ...
+        }
+        print calendar settup pieces    //make it look nice
+
+        run (number of skipped days) times{
+            print spaces
+        }
+
+        run (days in month) times{
+            if(end of line){
+                print new line
+            }
+            print run number //date
+        }
+        
+        set skipped days to days in month - 28 + skipped days //skips all days from the last set of 7 to the current set
+        if skipped days>6 { // prevents overflow
+            subtract 7 from skipped days
+        }
+    }
+}

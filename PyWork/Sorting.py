@@ -1,6 +1,6 @@
 # Merge Sort
 import random
-ray = [random.randint(1,1001) for x in range(16)]
+ray = [10, 20, 15, 12, 13, 11, 11, 12, 12, 15, 10, 10, 15, 15]
 length = len(ray)
 def merge(ray):
     if len(ray)>1:
