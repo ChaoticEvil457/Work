@@ -1,0 +1,66 @@
+include standard input/output
+
+void printCalendar(int year, int skipped); //prints out the calendar
+int printMonth(int year, int month, int skipped); //prints out the month, calls printMonthName and returns days in month
+int printMonthName(int year, int month); //prints month name and returns days in month
+//define prototype functions
+
+int main(void){
+    define variable for user year input
+    define variable for skipping days       //skip 0 for Sunday, skip 6 for Saturday, 
+                                            //starts at 3 b/c it's the start date for 2020
+    get a year from the user
+
+    add user input year - 2020 to skipped days (one extra skipped day per year after, and one less skipped for each before)
+    add input/4 to skipped for leap years
+    subtract 1 if input%4==0 (if current year is a leap year)
+
+    while skipped days>6 { // prevents overflow
+            subtract 7 from skipped days //6 is Saturday, so at 7, this would set you to 0, aka Sunday
+        }
+        while skipped days<0{//prevents underflow
+            add 7 to skipped days
+        }
+
+    printCalendar(input, skipped);
+}
+
+void printCalendar(int year, int skipped){ // prints out the calendar
+    run 12 (months) times{
+        
+        print calendar settup pieces    //make it look nice
+
+        int days = printMonth(year, month, skipped); // stores number of days in month
+
+        set skipped days to days in month - 28 + skipped days //skips all days in the last set of 7 in a month
+                //Just some more explination: the way I made this work is by looking at a month as 7 U 7 U 7 U 7 U 7
+                //and then you subtract the first 4 sets from the total days in the month (because all months are <= 28 days)
+                //afterwards, because you know that the numbers in the last set are split between the months 
+                //(no months are 35 days) you can then take the final answer and add it to skipped days
+        if skipped days>6 { // prevents overflow (7 days in a week, if skipped = 7, skipped should be 0 for Sunday)
+            subtract 7 from skipped days
+        }
+}
+int printMonth(int year, int month, int skipped){ // prints out the days in the month and returns the number of days
+
+    int days = printMonthName(year,month); // gets the day based on month
+
+    run (number of skipped days) times{ // prints spaces before first day
+        print spaces
+    }
+    run (days in month) times{ //prints dates
+        if(end of line){
+            print new line
+        }
+        print run number //date
+    }
+    return days;
+}
+int printMonthName(int year, int month){ // Prints the month name and returns the number of days in the month
+    switch(month){ // depending on what month it is, prints out a month and sets days in a month
+            case 0: January, print January, return 31
+            case 1: Febuary, print Febuary, return 28
+            if date % 4 == 0, return 29 instead      //leap year
+            ...
+        }
+}

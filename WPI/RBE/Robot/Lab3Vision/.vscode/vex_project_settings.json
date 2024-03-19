@@ -1,0 +1,18 @@
+{
+	"extension": {
+		"version": "0.1.0",
+		"json": 1
+	},
+	"project": {
+		"name": "Lab3Vision",
+		"description": "",
+		"creationDate": "Wed Sep 14 2022",
+		"platform": "V5",
+		"language": "cpp",
+		"slot": 2,
+		"sdkVersion": "V5_20220726_10_00_00",
+		"cpp": {
+			"includePath": []
+		}
+	}
+}

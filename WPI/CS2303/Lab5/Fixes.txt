@@ -1,0 +1,5 @@
+Line 121 ->
+Length being returned was the length - 1 because we started at 0, so we just need to add one to offset it
+Line 88 - 99 ->
+Removed an unused Node which was attempting to set Node.val for a Null pointer
+Previous item's next value was being set to current_item instead of new_item

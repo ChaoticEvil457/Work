@@ -1,0 +1,32 @@
+NOTE: java classes don't like dashes so you have to run the classes individually
+
+Edouard Lucas is also known for inventing the Towers of Hanoi puzzle in 1883
+
+Interestingly, adding the fibinocci sequence starting at the second number creates the fibinocci sequence starting at the
+5th position (0,1,1,2,3,...)
+3 + 0 = 3
+4 + 1 = 5
+7 + 1 = 8
+11 + 2 = 13
+18 + 3 = 21
+29 + 5 = 32
+...
+
+The output of L(n+1)/L(n) and time(L(n+1))/time(L(n)) is the golden ratio
+This means that the efficiency O(golden ratio ^ n) as the distance between numbers increases by the golden ratio each run
+
+My own series is O(1) because there are a fixed number of values that can appear (2,1,-1,-2)
+I was trying to make a sin wave of sorts. The time growth didn't seem to work well for it because it was calculated too
+quickly, but the ratio comes out to -1.0 between each number.
+
+---------------------------------------------------------------------------------------------------------------------
+
+With the Subirach Magic square,
+There are 88 combinations of 4 numbers which add to 33
+33 can be found a total of 310 ways using any number of numbers
+The greatest number of combinations can be found at 66 with 1364 combinations.
+
+notably, 66 is both double 33 (what each row, column, and diagonal add up to) 
+and is in the middle of the max (132) and the min (0)
+
+The fact that it's a "magic square" for 33 is due to the traditional belief that Jesus died at the age of 33
